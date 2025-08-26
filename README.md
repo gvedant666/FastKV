@@ -180,15 +180,14 @@ hello
 import socket, time
 
 HOST='127.0.0.1'; PORT=1234; N=10000
-s=socket.socket(); s.connect((HOST,PORT))
-start=time.time()
-for i in range(N):
-    cmd=f"SET key{i} 0 5\nhello\n".encode()
-    s.sendall(cmd)
-    s.recv(64)
-end=time.time()
-print("Throughput:", N/(end-start),"req/s")
-s.close()
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.connect((HOST, PORT))
+        start = time.time()
+        for i in range(n):
+            s.sendall(pack_req(["set", f"key{i}", str(i)]))
+            _ = recv_resp(s)  # ignore content, but fully read it
+        dur = time.time() - start
+        print(f"Sent {n} requests in {dur:.3f}s ({n/dur:,.0f} req/sec)")
 ```
 
 Run multiple clients to simulate load:
