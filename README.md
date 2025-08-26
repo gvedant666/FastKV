@@ -233,7 +233,7 @@ python3 bench/simple_bench.py &
 
 ## Testing & validation
 
-* Unit tests for `hashtable`, `avl`, `zset`
+* Unit tests for `hashtable`, `avl`, `zset`, `heap`
 * Integration test: start server, run scripts
 * Benchmark stress tests for concurrency
 
@@ -253,13 +253,6 @@ python3 bench/simple_bench.py &
 * No replication/high-availability yet
 * Protocol is simple, not RESP-compatible
 * Add security (TLS, auth)
-
----
-
-## Contributing
-
-* Fork, branch, PR
-* Run tests before pushing
 
 ---
 
