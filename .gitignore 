@@ -1,0 +1,53 @@
+# --- OS files ---
+.DS_Store
+Thumbs.db
+
+# --- VS Code ---
+.vscode/
+.history/
+*.code-workspace
+
+# --- Build outputs ---
+build/
+dist/
+out/
+*.log
+
+# --- Compiled binaries (C/C++) ---
+*.o
+*.obj
+*.so
+*.a
+*.exe
+*.out
+*.dll
+*.lib
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+env/
+venv/
+
+# --- Node.js ---
+node_modules/
+npm-debug.log
+yarn-error.log
+.pnpm-debug.log
+
+# --- Archives / Large files ---
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.rar
+*.iso
+
+# --- Others ---
+*.swp
+*.swo
+*.tmp
