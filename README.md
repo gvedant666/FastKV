@@ -73,27 +73,6 @@ g++ -std=c++17 -O2 server.cpp thread_pool.cpp hashtable.cpp avl.cpp zset.cpp hea
 ./fastkv --port 1234 --workers 4
 ```
 
-### Connect with client
-
-```bash
-# connect using netcat
-nc localhost 1234
-
-# Example interaction:
-SET mykey 0 5
-hello
-GET mykey
-```
-
-Expected output:
-
-```
-+OK
-+VALUE 5
-hello
-```
-
----
 
 ## Project structure
 
@@ -153,9 +132,9 @@ sequenceDiagram
 ### Example
 
 ```
-SET mykey 0 5
+set mykey 0 5
 hello
-GET mykey
+get mykey
 ```
 
 Responses:
