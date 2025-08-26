@@ -60,8 +60,8 @@ This README acts as a combined documentation + technical report that explains ar
 
 ```bash
 # clone repository
-git clone https://github.com/yourname/fastkv.git
-cd fastkv
+git clone https://github.com/gvedant666/FastKV.git
+cd FastKV
 
 # build the server (using g++)
 g++ -std=c++17 -O2 server.cpp thread_pool.cpp hashtable.cpp avl.cpp zset.cpp heap.cpp -o fastkv -lpthread
@@ -98,7 +98,7 @@ hello
 ## Project structure
 
 ```
-fastkv/
+FastKV/
 ├── avl.cpp / avl.h        # AVL tree implementation
 ├── common.h               # Shared definitions
 ├── hashtable.cpp / .h     # Hash table
@@ -188,9 +188,9 @@ hello
 
 ## Benchmarks & results
 
-* **Single-thread throughput**: \~6k requests/sec
-* **Multi-thread throughput (4 workers)**: \~28k requests/sec
-* **Latency (99th percentile)**: \~2.5 ms
+* **Single-thread throughput**: ~28k requests/sec  
+* **Latency (average per request)**: ~35–40 µs (microseconds)  
+* **Latency (99th percentile)**: <0.1 ms
 
 ---
 
