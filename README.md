@@ -1,4 +1,4 @@
-# FastKV — In-Memory Key-Value Store
+# In-Memory Data Store — In-Memory Key-Value Store
 
 > A high-performance in-memory key-value store inspired by Redis, designed for low-latency and high-throughput workloads. Implements a custom TCP protocol, efficient data structures (hash table, AVL, zset), and a thread-pool driven server loop.
 
@@ -32,7 +32,7 @@
 
 ## Overview
 
-FastKV is a compact, educational, and production-hardenable in-memory key-value store implemented in C/C++. It targets real-time and high-throughput applications by combining:
+In-Memory Data Store is a compact, educational, and production-hardenable in-memory key-value store implemented in C/C++. It targets real-time and high-throughput applications by combining:
 
 * A **custom TCP command protocol** (simple, text-based inspired by RESP) for client-server communication.
 * **Efficient core containers**: hash table for key-value operations, AVL trees for ordered data, and zset for sorted sets.
@@ -60,8 +60,8 @@ This README acts as a combined documentation + technical report that explains ar
 
 ```bash
 # clone repository
-git clone https://github.com/gvedant666/FastKV.git
-cd FastKV
+git clone https://github.com/gvedant666/In-Memory Data Store.git
+cd In-Memory Data Store
 
 # build the server (using g++)
 g++ -std=c++17 -O2 server.cpp thread_pool.cpp hashtable.cpp avl.cpp zset.cpp heap.cpp -o fastkv -lpthread
@@ -77,7 +77,7 @@ g++ -std=c++17 -O2 server.cpp thread_pool.cpp hashtable.cpp avl.cpp zset.cpp hea
 ## Project structure
 
 ```
-FastKV/
+In-Memory Data Store/
 ├── avl.cpp / avl.h        # AVL tree implementation
 ├── common.h               # Shared definitions
 ├── hashtable.cpp / .h     # Hash table
